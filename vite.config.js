@@ -1,8 +1,15 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import { defineConfig } from 'vite'; // Import defineConfig from Vite
+import react from '@vitejs/plugin-react'; // Import the react plugin
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  base: "/EcommApp/",
+  plugins: [react()], // Use the react plugin
+  base: "/EcommApp/dist/",
+  build: {
+    minify: true, // Minify output for production
+    terserOptions: {
+      compress: {
+        drop_console: true, // Remove console.* statements
+      },
+    },
+  },
 });
