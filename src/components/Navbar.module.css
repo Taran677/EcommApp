@@ -3,13 +3,13 @@
     flex: 0.1;
 }
 .li:hover{
-    color: var(--bs-light) !important ;
+    color: var(--bs-light)  ;
 }
 .li {
-    align-items: first baseline !important;
+    align-items: first baseline ;
     
 }
 .navbarmain{
     display: flex;
-   margin: 0;
+   margin: 0 ;
 }

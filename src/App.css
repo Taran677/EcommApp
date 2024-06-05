@@ -1,13 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script:wght@400..700&display=swap');
+
 * {
   box-sizing: border-box;
 }
 
 #logo {
-  font-family: cursive;
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
   color: var(--bs-light);
-  background: #56CCF2;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
+  background: #56CCF2;
+  font-size: 4vh;
+  background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);
+  background: linear-gradient(to right, #2F80ED, #56CCF2);
+}
 
+#root {
+  padding-top: 25vh;
+  align-items: center !important;
+  justify-content: center !important;
+  display: flex;
+}
+
+.logo {
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+  color: var(--bs-light);
+  background: #56CCF2;
+  background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);
+  background: linear-gradient(to right, #2F80ED, #56CCF2);
+}
+@media screen and (max-width: 2000px) {
+  .display-4{
+    font-size: 7vh !important ;
+    align-items: first baseline !important;
+    text-align-last: left !important;
+  }
+}
+.navbar-toggler{
+  color: #2F80ED !important;
+}
+@media screen and (max-width: 576px) {
+  header main section{
+    padding: 10vh;
+    justify-content: center;
+    align-items: center;
+  }
+  .display-4, .logo, #logo{
+    font-size: 15vh !important;
+  }
+  #root{
+    padding-top: 40vh;
+  }
 }

@@ -1,0 +1,14 @@
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.aboutintro{
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+}
+.maintitle{
+    padding: 0 !important;
+    text-align: left;
+}
