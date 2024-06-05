@@ -10,7 +10,7 @@ function About() {
           >
             <figure className={`${css.imgContanier} col-md-5 col-12`}>
               <img
-                src="src\\assets\\shop.svg"
+                src="src\assets\shop.svg"
                 alt="Woman Carrying Tote Bags"
                 className={`${css.img} img-fluid rounded`}
               />
