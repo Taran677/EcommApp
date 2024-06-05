@@ -10,7 +10,7 @@ function About() {
           >
             <figure className={`${css.imgContanier} col-md-5 col-12`}>
               <img
-                src="src\assets\shop.svg"
+                src="https://raw.githubusercontent.com/Taran677/EcommApp/7cdc281fe2e2d758ddc87c2adc79df64b9e1534f/src/assets/shop.svg"
                 alt="Woman Carrying Tote Bags"
                 className={`${css.img} img-fluid rounded`}
               />
