@@ -51,4 +51,15 @@
   #root{
     padding-top: 40vh;
   }
+  .buttons{
+    padding: 1vh !important;
+    flex-direction: row !important;
+  }
+  .buttons button, .buttons button span{
+    display: flex;
+    flex-shrink: 1;
+    flex-direction: row;
+    font-size: x-small;
+    justify-content: flex-start;
+  }
 }
