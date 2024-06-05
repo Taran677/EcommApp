@@ -46,7 +46,7 @@
     align-items: center;
   }
   .display-4, .logo, #logo{
-    font-size: 15vh !important;
+    font-size: 5vh !important;
   }
   #root{
     padding-top: 40vh;
