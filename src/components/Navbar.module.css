@@ -1,0 +1,15 @@
+.li{
+    display: flex;
+    flex: 0.1;
+}
+.li:hover{
+    color: var(--bs-light) !important ;
+}
+.li {
+    align-items: first baseline !important;
+    
+}
+.navbarmain{
+    display: flex;
+   margin: 0;
+}
