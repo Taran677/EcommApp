@@ -20,7 +20,7 @@ function About() {
                 Welcome to <span className="badge logo">QuickCart</span>
               </h1>
               <p className="tagline lead">
-                Your one-stop shop for everything you need! <br />
+                Your one-stop shop for everything you need.
                 Explore more than ongoing sales and offers!
               </p>
               <section className="buttons d-flex flex-wrap">

@@ -1,19 +1,33 @@
-.container{
+.container {
     min-height: 70vh;
     justify-content: center;
 }
-.cardimg{
-    min-height: 0.3vh;
-    max-height: 0.3vh;
+
+.cardimg {
+    height: 1vh;
     object-fit: cover;
     background: url("../assets/gradient.png");
     background-position: center;
 }
-.cardbody{
+
+.cardbody {
     flex-direction: column;
     justify-content: space-between;
 }
-.button{
+
+.button {
     display: flex;
     max-width: fit-content;
+}
+
+.displaymain {
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    color: transparent;
+    background: #7F7FD5;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }

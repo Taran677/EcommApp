@@ -29,6 +29,7 @@
   background: #56CCF2;
   background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);
   background: linear-gradient(to right, #2F80ED, #56CCF2);
+  margin-left: 1vw;
 }
 @media screen and (max-width: 2000px) {
   .display-4{
@@ -72,5 +73,61 @@
 .mainelements{
   display: flex;
   flex-direction: row;
-  padding-bottom: 15vh;
+}
+.sphere{
+  display: flex;
+  position: absolute;
+  z-index:  -1;
+  left: 50%;
+  justify-self: center;
+  align-self: center;
+  translate: -50%;
+  bottom: 0;
+  top: 100vh;
+  max-width: 70vh !important;
+  aspect-ratio: 1;
+}
+.card{
+  background: transparent !important;
+  backdrop-filter: blur(3vh);
+  justify-content: space-between !important;
+  display: flex !important;
+}
+.nav{
+  max-width: 100vw !important;
+}
+@media screen and (max-width: 900px) {
+  .sphere{
+      scale: 0.3;
+      top: 130%;
+  }
+}
+
+.card-body-1{
+  display: flex !important;
+  flex-direction: column !important;
+  flex-shrink: 1 !important;
+  max-height: 4rem;
+  display:flex;
+  flex-direction: row !important;
+}
+.card-body-1 a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.display-1{
+  background-clip: text !important;
+    -webkit-background-clip: text !important;
+    color: transparent;
+    background: #7F7FD5;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    text-align: center;
+    font-weight: normal; 
+    padding-bottom: 15vh;
 }

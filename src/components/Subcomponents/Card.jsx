@@ -1,17 +1,17 @@
 import css from "../Cards.module.css"
 function Card ({title, subtitle, btnText}) {
-    return <div className={`card ${css.card} mx-1 my-1 col-md-3`}>
+    return <div className={`card ${css.card} mx-1 my-1 container col-md-3`}>
             
     <div className={`card-body d-flex ${css.cardbody}`}>
-      <h5 className="card-title">{title}</h5><img
+      <h5 className="card-title  my-2">{title}</h5><img
       src="src\assets\gradient.png"
-      className={`${css.cardimg} card-img-top rounded`}
+      className={`${css.cardimg} card-img-top rounded my-2`}
       alt="gradient"
     />
-      <p className="card-text">
+      <p className="card-text  my-2">
         {subtitle}
       </p>
-      <a href="#" className={`btn btn-primary ${css.button}`}>
+      <a href="#" className={`btn btn-primary  my-2 ${css.button}`}>
         {btnText}
       </a>
     </div>

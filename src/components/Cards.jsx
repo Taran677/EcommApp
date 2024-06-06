@@ -9,10 +9,11 @@ function Cards() {
         <div
           className={`${css.cardcont} container justify-self-center row d-flex justify-content-center py-5`}
         >
+            <h2 className={`${css.displaymain} display-1 text-center py-3 fw-normal`}>Shop the Best Deals! </h2>
           <Card
             title={"Discover Trendy Apparel!"}
             subtitle={
-              "Enjoy a Massive 50% Discount on Our Exclusive Selection of Clothes. Limited Time Offer!"
+              "Enjoy a Massive 50% Discount on Our Exquisite and Exclusive Selection of Clothes. Limited Time Offer!"
             }
             btnText={"Start Shopping!"}
           />
@@ -34,6 +35,9 @@ function Cards() {
           />
         </div>
       </section>
+      <figure className="sphere container">
+        <img className={`${css.imgsphere} img img-fluid`} src="./src/assets/sphere.svg" alt="decoration" />
+      </figure>
     </>
   );
 }

@@ -13,6 +13,11 @@
 .maintitle{
     padding: 0 !important;
     text-align: left;
+    text-wrap: nowrap;
+    word-break: normal;
+    word-wrap: break-word;
+    display: flex;
+    flex-wrap: wrap;
 }
 @media screen and (max-width: 576px) {
     .aboutintro{
