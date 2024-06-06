@@ -19,6 +19,7 @@
   align-items: center !important;
   justify-content: center !important;
   display: flex;
+  flex-direction: column;
 }
 
 .logo {
@@ -48,8 +49,14 @@
   .display-4, .logo, #logo{
     font-size: 5vh !important;
   }
+  .display-4{
+    text-align: center;
+    align-items: center;
+    display: flex ;
+  }
   #root{
     padding-top: 20vh;
+    
   }
   .buttons{
     padding: 1vh !important;
@@ -59,7 +66,11 @@
     display: flex;
     flex-shrink: 1;
     flex-direction: row;
-    font-size: x-small;
     justify-content: flex-start;
   }
+}
+.mainelements{
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 15vh;
 }

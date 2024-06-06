@@ -11,6 +11,7 @@
     "deploy": "vite build && gh-pages -d dist"
   },
   "dependencies": {
+    "axios": "^1.7.2",
     "bootstrap": "^5.3.3",
     "icons": "^1.0.0",
     "react": "^18.2.0",

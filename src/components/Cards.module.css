@@ -1,0 +1,19 @@
+.container{
+    min-height: 70vh;
+    justify-content: center;
+}
+.cardimg{
+    min-height: 0.3vh;
+    max-height: 0.3vh;
+    object-fit: cover;
+    background: url("../assets/gradient.png");
+    background-position: center;
+}
+.cardbody{
+    flex-direction: column;
+    justify-content: space-between;
+}
+.button{
+    display: flex;
+    max-width: fit-content;
+}
