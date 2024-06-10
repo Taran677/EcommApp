@@ -42,8 +42,7 @@ function Cards() {
       <figure className="sphere container">
         <img
           className={`${css.imgsphere} img img-fluid`}
-          src="https://raw.githubusercontent.com/Taran677/EcommApp/master/src/assets/sphere.png
-"
+          src="https://raw.githubusercontent.com/Taran677/EcommApp/master/src/assets/sphere.png"
           alt="decoration"
         />
       </figure>
