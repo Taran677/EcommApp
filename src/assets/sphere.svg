@@ -6,5 +6,5 @@
       <use xlink:href="#img_1" transform="matrix(0.4024123 0 0 0.4024123 0 0)" />
     </pattern>
   </defs>
-  <path d="M0 0L368 0L368 367L0 367L0 0Z" id="blue-ribbed-sphere" fill="url(#pattern_1)" fill-rule="evenodd" stroke="none" />
+  <path d="M0 0L368 0L368 367L0 367L0 0Z" id="Rectangle" fill="url(#pattern_1)" fill-rule="evenodd" stroke="none" />
 </svg>

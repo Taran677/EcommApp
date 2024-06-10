@@ -42,7 +42,8 @@ function Cards() {
       <figure className="sphere container">
         <img
           className={`${css.imgsphere} img img-fluid`}
-          src="https://raw.githubusercontent.com/Taran677/EcommApp/26ef55beea71e239519f10d467de529b23052901/src/assets/sphere.svg"
+          src="https://taran677.github.io/EcommApp/dist/src/assets/sphere.svg
+"
           alt="decoration"
         />
       </figure>
