@@ -4,12 +4,16 @@ function Cards() {
   return (
     <>
       <section
-        className={`${css.container} container d-flex justiffy-content-center align-items-center`}
+        className={`${css.container} container d-flex justify-content-center align-items-center`}
       >
         <div
           className={`${css.cardcont} container justify-self-center row d-flex justify-content-center py-5`}
         >
-            <h2 className={`${css.displaymain} display-1 text-center py-3 fw-normal`}>Shop the Best Deals! </h2>
+          <h2
+            className={`${css.displaymain} display-1 text-center py-3 fw-normal`}
+          >
+            Shop the Best Deals!{" "}
+          </h2>
           <Card
             title={"Discover Trendy Apparel!"}
             subtitle={
@@ -36,7 +40,11 @@ function Cards() {
         </div>
       </section>
       <figure className="sphere container">
-        <img className={`${css.imgsphere} img img-fluid`} src="./src/assets/sphere.svg" alt="decoration" />
+        <img
+          className={`${css.imgsphere} img img-fluid`}
+          src="https://raw.githubusercontent.com/Taran677/EcommApp/26ef55beea71e239519f10d467de529b23052901/src/assets/sphere.svg"
+          alt="decoration"
+        />
       </figure>
     </>
   );
