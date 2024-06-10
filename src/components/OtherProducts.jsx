@@ -1,8 +1,8 @@
 import Products from "./Products";
 
-function OtherProducts({ products }) {
+function OtherProducts({setProducts, products, explore }) {
   return (
-    <Products range={20} products={products}></Products>
+    <Products viewNav={explore} range={20} setProducts={setProducts} products={products}></Products>
   );
 }
 export default OtherProducts;

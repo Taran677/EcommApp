@@ -17,8 +17,8 @@ function App() {
         <Navbar setExplore={setExplore} />
         {explore === false && <About />}
       </div>
-      {explore === false && <Cards />}{explore === true && <OtherProducts products={products}></OtherProducts>} 
-      {explore === false && <Trending products={products}></Trending>}
+      {explore === false && <Cards />}{explore === true && <OtherProducts products={products} setProducts={setProducts} explore={explore}></OtherProducts>} 
+      {explore === false && <Trending explore={explore} products={products} setProducts={setProducts}></Trending>}
       
       <CallAPI setProducts={setProducts} />
     </>
