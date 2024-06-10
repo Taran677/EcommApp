@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import css from "./Navbar.module.css";
 
-function Navbar() {
+function Navbar({setExplore}) {
   return (
     <nav
       className={`row bg-light mw-100 fixed-top justify-content-center d-flex ${css.navbarmain} border-bottom border-primary navbar navbar-expand-lg`}
@@ -44,7 +44,7 @@ function Navbar() {
             >
               QuickCart
             </li>
-            <li
+            <li onClick={()=>{setExplore(true)}}
               className={`${css.li} justify-content-center fw-normal nav-link btn btn-primary py-3 mx-2 text-center rounded`}
             >
               Explore
@@ -52,7 +52,7 @@ function Navbar() {
             <li
               className={`${css.li} justify-content-center fw-normal nav-link btn btn-primary py-3 mx-2 text-center rounded`}
             >
-              Categories
+              Cart
             </li>
           </ul>
         </div>

@@ -1,0 +1,10 @@
+h2{
+    font-weight: 400 !important;
+    padding-bottom: 0.6cap !important;
+}
+.counterContainer{
+    flex: 2;
+}
+.counterContainer button{
+    margin: 1rem;
+}
