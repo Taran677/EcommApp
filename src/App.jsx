@@ -10,6 +10,7 @@ import OtherProducts from "./components/OtherProducts"
 function App() {
   const [products, setProducts] = useState([]);
   const [explore, setExplore] = useState(false);
+  console.log(explore)
 
   return (
     <>

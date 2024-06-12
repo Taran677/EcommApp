@@ -6,7 +6,8 @@ function Trending({setProducts, products ,explore }) {
     <>
       <hr style={{ marginTop: "3vh" }} />
       <h2 className="display-1">Trending Now!</h2>
-      <Products viewNav={explore} products={products} setProducts={setProducts} range={5}></Products>;
+      <div className="container row"> <Products viewNav={explore} products={products} setProducts={setProducts} range={5}></Products>;</div>
+     
     </>
   );
 }
