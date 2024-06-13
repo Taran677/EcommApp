@@ -8,7 +8,7 @@ function Navbar({ setExplore, setCart, setAboutMe, setContact}) {
       className={`row bg-light mw-100 fixed-top justify-content-center d-flex ${css.navbarmain} border-bottom border-primary navbar navbar-expand-lg`}
     >
       <div className="container-fluid">
-        <a className="navbar-brand d-lg-none rounded px-2" id="logo" href="#">
+        <a className="navbar-brand d-lg-none rounded px-2 text-light" id="logo" href="#">
           QuickCart
         </a>
         <button
