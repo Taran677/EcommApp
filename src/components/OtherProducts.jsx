@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Products from "./Products";
 
-function OtherProducts({ setProducts, products, explore }) {
+function OtherProducts({ productsInCart, setProductsInCart, setProducts, products, explore, count, setCount, setCart}) {
   const [selectedSortOption, setSelectedSortOption] = useState("");
   const [selectedFilterOption, setSelectedFilterOption] = useState("");
 
@@ -93,6 +93,11 @@ function OtherProducts({ setProducts, products, explore }) {
               range={20}
               setProducts={setProducts}
               products={sortedAndFilteredProducts} // Pass sortedAndFilteredProducts instead of products
+              count={count}
+              setCount={setCount}
+              setCart = {setCart}
+              productsInCart={productsInCart}
+              setProductsInCart={setProductsInCart}
             />
           </div>
         </div>

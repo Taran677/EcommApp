@@ -1,7 +1,8 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import css from "./Navbar.module.css";
+import { flushSync } from "react-dom";
 
-function Navbar({setExplore}) {
+function Navbar({ setExplore, setCart, setAboutMe}) {
   return (
     <nav
       className={`row bg-light mw-100 fixed-top justify-content-center d-flex ${css.navbarmain} border-bottom border-primary navbar navbar-expand-lg`}
@@ -29,7 +30,7 @@ function Navbar({setExplore}) {
             className={`nav ${css.ul} navbar py-0 mx-0 d-flex align-items-center py-2 justify-content-center w-100 container-fluid`}
           >
             <li
-              className={`${css.li} justify-content-center fw-normal nav-link btn btn-primary py-3 mx-2 text-center rounded`}
+              className={`${css.li} justify-content-center fw-normal nav-link btn btn-primary py-3 mx-2 text-center rounded`} onClick={()=>setAboutMe(true)}
             >
               About
             </li>
@@ -41,18 +42,35 @@ function Navbar({setExplore}) {
             <li
               className={`d-none d-lg-block ${css.li} justify-content-center fw-normal nav-link btn btn-primary py-3 mx-2 text-center rounded-top-right`}
               id="logo"
+              onClick={() => {
+                setCart(false);
+                setExplore(false);
+              }}
             >
               QuickCart
             </li>
-            <li onClick={()=>{setExplore(true)}}
+            <li
+              onClick={() => {
+                {
+                  setExplore(true);
+                  setCart(false);
+                }
+              }}
               className={`${css.li} justify-content-center fw-normal nav-link btn btn-primary py-3 mx-2 text-center rounded`}
             >
               Explore
             </li>
             <li
-              className={`${css.li} justify-content-center fw-normal nav-link btn btn-primary py-3 mx-2 text-center rounded`}
+              className={`${css.li} justify-content-center fw-normal nav-link btn btn-primary py-3 mx-2 text-center rounded cartnav`}
+              onClick={() => {
+                setCart(true);
+                setExplore(false);
+              }}
             >
               Cart
+             
+              <span className="mybdg badge bg-primary badge-primary">{localStorage.getItem("productsInCart") ? JSON.parse(localStorage.getItem("productsInCart")).length : 0}</span>
+           
             </li>
           </ul>
         </div>

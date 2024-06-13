@@ -1,11 +1,39 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CardProduct from "./Subcomponents/CardProduct";
 
-function Products({ products, range}) {
+function Products({ products, range }) {
+  const [counts, setCounts] = useState([]);
+  const [cart, setCart] = useState([]);
+  const [productsInCart, setProductsInCart] = useState([]);
+
+  // Initialize counts based on the range
+  useEffect(() => {
+    setCounts(products.slice(0, range).map(() => 0));
+  }, [products, range]);
+
+ 
+
+  const handleSetCount = (index, newCount) => {
+    setCounts((prevCounts) => {
+      const newCounts = [...prevCounts];
+      newCounts[index] = newCount;
+      return newCounts;
+    });
+  };
+
   return (
     <>
-      {Object.entries(products).slice(0, range).map(([key, product]) => (
-        <CardProduct key={key} product={product} />
+      {products.slice(0, range).map((product, index) => (
+        <CardProduct
+          key={product.id}
+          id={index}
+          product={product}
+          count={counts[index]}
+          setCount={(newCount) => handleSetCount(index, newCount)}
+          setCart={setCart}
+          productsInCart={productsInCart}
+          setProductsInCart={setProductsInCart}
+        />
       ))}
     </>
   );

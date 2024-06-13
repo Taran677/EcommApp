@@ -1,6 +1,6 @@
 import css from "./About.module.css";
 
-function About() {
+function About({setCart, setExplore}) {
   return (
     <>
       <header className="container">
@@ -24,7 +24,7 @@ function About() {
                 Explore more than ongoing sales and offers!
               </p>
               <section className="buttons d-flex flex-wrap">
-                <button className="btn btn-outline-primary d-flex align-items-center mx-1">
+                <button className="btn btn-outline-primary d-flex align-items-center mx-1" onClick={()=>{setCart(false); setExplore(true)}}>
                   Explore
                   <span className="material-symbols-outlined">north_east</span>
                 </button>
