@@ -9,6 +9,7 @@ import Trending from "./components/Trending";
 import OtherProducts from "./components/OtherProducts";
 import AboutMe from "./components/AboutMe";
 import Cart from "./components/Cart";
+import Contact from "./components/Contact";
 function App() {
   const [products, setProducts] = useState([]);
   const [explore, setExplore] = useState(false);
@@ -18,6 +19,7 @@ function App() {
 
   const [counts, setCounts] = useState([]);
   const [aboutMe, setAboutMe] = useState(false);
+  const [contact, setContact] = useState(false);
   const [cart, setCart] = useState(false);
   useEffect(() => {
     setCounts(products.map(() => 0));
@@ -39,13 +41,14 @@ function App() {
           setExplore={setExplore}
           setCart={setCart}
           productsInCart={productsInCart}
+          setContact={setContact}
         />
-        {!explore && !cart && !aboutMe && (
+        {!explore && !contact && !cart && !aboutMe && (
           <About setCart={setCart} setExplore={setExplore} />
         )}
       </div>
-      {!explore && !cart && !aboutMe && <Cards />}
-      {explore && !cart && !aboutMe && (
+      {!explore && !contact && !cart && !aboutMe && <Cards />}
+      {explore && !contact && !cart && !aboutMe && (
         <OtherProducts
           products={products}
           setProducts={setProducts}
@@ -57,7 +60,7 @@ function App() {
           setCart={setCart}
         />
       )}
-      {!explore && !cart && !aboutMe && (
+      {!explore && !contact && !cart && !aboutMe && (
         <Trending
           explore={explore}
           products={products}
@@ -69,9 +72,9 @@ function App() {
           setProductsInCart={setProductsInCart}
         />
       )}
-      {cart && !explore && !aboutMe && <Cart></Cart>}
-      {aboutMe && !cart && !explore && <AboutMe></AboutMe>}
-
+      {cart && !contact && !explore && !aboutMe && <Cart></Cart>}
+      {aboutMe && !contact  && !cart && !explore && <AboutMe></AboutMe>}
+      {!cart && contact && !explore && !aboutMe && <Contact></Contact>}
       <CallAPI setProducts={setProducts} />
     </>
   );

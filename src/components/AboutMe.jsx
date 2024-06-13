@@ -5,13 +5,13 @@ function AboutMe() {
     <div className="container mt-4">
       <div className="row">
         <div className="col-md-6">
-          <h2>About Me</h2>
-          <p>
+          <h2 className="display-3">About Me</h2>
+          <p className="lead">
             Hi there! I am Taranveer Singh, a Bachelor's in Technology student
             in Computer Science and Engineering at Guru Nanak Dev University. I
-            am passionate about web development, and this is one of my projects.
+            am passionate about web development, and this is one of my projects, made using <span className="lead"><a target="blank" href="https://getbootstrap.com/">Bootstrap</a></span>, <span className="lead"><a target="blank" href="https://fakestoreapi.com/docs">FakeStore API</a></span> and <span className="lead"><a target="blank" href="https://react.dev/">ReactJs</a></span>.
           </p>
-          <p>
+          <p className="lead">
             You can connect with me on LinkedIn and GitHub.
             <br />
             <div className="handles container-fluid col-12 w-100 d-flex justify-content-center">

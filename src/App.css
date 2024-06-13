@@ -182,3 +182,23 @@ flex-direction: row !important;
   align-items: center;
   justify-content: center;
  }
+ a{
+  text-decoration: none !important;
+  color: inherit !important;
+ }
+ .bi-github:hover{
+  color: #171515;
+  scale: 2.1;
+ }
+ .bi-linkedin:hover{
+  color: #0072b1;
+  scale: 2.1;
+ }
+ .bi{
+  transition: color 0.2s ease;
+  transition: scale 0.3s ease;
+ }
+ .toast{
+  position: absolute !important;
+  bottom: -60vh;
+ }

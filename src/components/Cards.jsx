@@ -4,7 +4,7 @@ function Cards() {
   return (
     <>
       <section
-        className={`${css.container} container d-flex justify-content-center align-items-center`}
+        className={`${css.container} container d-flex justify-content-center align-items-center`} id="cardcont"
       >
         <div
           className={`${css.cardcont} container justify-self-center row d-flex justify-content-center py-5`}

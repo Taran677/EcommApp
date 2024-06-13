@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { Toast } from 'react-bootstrap';
 
-function Checkout() {
+function Bill() {
   const [total, setTotal] = useState(0);
   const [itemsInCart, setItemsInCart] = useState([]);
+  const [showToast, setShowToast] = useState(false); // State to control toast visibility
 
   useEffect(() => {
     // Fetch items from localStorage on component mount
@@ -21,10 +23,10 @@ function Checkout() {
     setTotal(sum);
   }, [itemsInCart]);
 
-  // Dummy function to simulate checkout action
+  // Function to handle checkout action
   const handleCheckout = () => {
-    alert(`Checkout Total: $${total.toFixed(2)}`);
-    // Perform actual checkout logic here
+    setShowToast(true); // Show the toast when checkout is clicked
+    // Perform any additional checkout logic here
   };
 
   return (
@@ -50,8 +52,18 @@ function Checkout() {
           </button>
         </div>
       </div>
+
+      {/* Bootstrap Toast */}
+      <Toast show={showToast} onClose={() => setShowToast(false)} delay={3000} autohide>
+        <Toast.Header>
+          <strong className="mr-auto">Checkout Successful</strong>
+        </Toast.Header>
+        <Toast.Body>
+          Your total bill is ${total.toFixed(2)}. Thank you for shopping!
+        </Toast.Body>
+      </Toast>
     </div>
   );
 }
 
-export default Checkout;
+export default Bill;

@@ -12,7 +12,7 @@ function BuyProduct({ product, count, setCount, id }) {
             Quantity: {count}
           </span>
 
-          <a href="#" className="btn btn-primary">
+          <a href="#" className="btn btn-primary text-light">
             Checkout
           </a>
         </span>

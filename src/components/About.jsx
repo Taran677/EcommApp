@@ -29,7 +29,7 @@ function About({setCart, setExplore}) {
                   <span className="material-symbols-outlined">north_east</span>
                 </button>
                 <button className="btn btn-outline-primary d-flex align-items-center mx-1">
-                  Learn More
+                  <a href="#cardcont">Learn More</a>
                   <span className="material-symbols-outlined">north_east</span>
                 </button>
               </section>
