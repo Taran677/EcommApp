@@ -59,7 +59,7 @@ function CardProduct({
         <p className="card-text">{product.description}</p>
       </div>
       <ul className="list-group list-group-flush">
-        <li className="list-group-item">Price: {product.price}</li>
+        <li className="list-group-item">{`Price: $${product.price}`}</li>
         <li className="list-group-item">Category: {product.category}</li>
         <li className="list-group-item">{`Rating: ${product.rating.rate}  (${product.rating.count} reviews)`}</li>
       </ul>
