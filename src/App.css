@@ -279,6 +279,9 @@ ul .btn-primary:hover{
 .text-center{
   animation: none;
 }
+.cardbottom{
+  margin-bottom: 20vh;
+}
 @media screen and (max-width:576px) {
   .display-1{
     line-height: 2cap !important;

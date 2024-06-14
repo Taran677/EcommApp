@@ -47,7 +47,7 @@ function Bill({ productsInCart, setProductsInCart }) {
           </ul>
         </div>
       </div>
-      <div className="card mt-3">
+      <div className="card mt-3 cardbottom">
         <div className="card-body">
           <h5 className="card-title">Total: ${total.toFixed(2)}</h5>
           <button className="btn btn-primary" onClick={handleCheckout}>
