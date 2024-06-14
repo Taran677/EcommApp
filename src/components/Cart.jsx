@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import CardProduct from './Subcomponents/CardProduct';
-import BuyProduct from './Subcomponents/BuyProduct';
-import Bill from './Subcomponents/Bill';
+import React, { useEffect, useState } from "react";
+import CardProduct from "./Subcomponents/CardProduct";
+import BuyProduct from "./Subcomponents/BuyProduct";
+import Bill from "./Subcomponents/Bill";
 function Cart() {
   const [productsInCart, setProductsInCart] = useState([]);
 
   useEffect(() => {
-    const storedProducts = localStorage.getItem('productsInCart');
+    const storedProducts = localStorage.getItem("productsInCart");
     if (storedProducts) {
       setProductsInCart(JSON.parse(storedProducts));
     }
@@ -28,7 +28,10 @@ function Cart() {
           />
         ))}
       </div>
-      <Bill></Bill>
+      <Bill
+        productsInCart={productsInCart}
+        setProductsInCart={setProductsInCart}
+      ></Bill>
     </div>
   );
 }

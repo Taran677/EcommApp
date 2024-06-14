@@ -240,8 +240,10 @@ a {
 }
 
 .toast {
-  position: absolute !important;
-  bottom: -60vh;
+  position: relative !important;
+  bottom: 15vh;
+  left: 40vw;
+
 }
 .btn-primary{
   color: var(--bs-light) !important ;

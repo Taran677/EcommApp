@@ -1,32 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import { Toast } from 'react-bootstrap';
 
-function Bill() {
+function Bill({ productsInCart, setProductsInCart }) {
   const [total, setTotal] = useState(0);
-  const [itemsInCart, setItemsInCart] = useState([]);
   const [showToast, setShowToast] = useState(false); // State to control toast visibility
 
   useEffect(() => {
-    // Fetch items from localStorage on component mount
-    const storedItems = localStorage.getItem('productsInCart');
-    if (storedItems) {
-      setItemsInCart(JSON.parse(storedItems));
-    }
-  }, []);
-
-  // Function to calculate total bill
-  useEffect(() => {
+    // Function to calculate total bill
     let sum = 0;
-    itemsInCart.forEach(item => {
+    productsInCart.forEach(item => {
       sum += item.price * item.quantity;
     });
     setTotal(sum);
-  }, [itemsInCart]);
+  }, [productsInCart]);
 
   // Function to handle checkout action
   const handleCheckout = () => {
     setShowToast(true); // Show the toast when checkout is clicked
     // Perform any additional checkout logic here
+  };
+
+  // Function to handle removing an item from the cart
+  const handleRemove = (id) => {
+    const updatedCart = productsInCart.filter(item => item.id !== id);
+    setProductsInCart(updatedCart);
+    localStorage.setItem('productsInCart', JSON.stringify(updatedCart)); // Update localStorage
   };
 
   return (
@@ -36,9 +34,14 @@ function Bill() {
         <div className="card-body">
           <h5 className="card-title">Items in Cart</h5>
           <ul className="list-group">
-            {itemsInCart.map((item, index) => (
-              <li className="list-group-item" key={index}>
-                {item.title} - ${item.price} x {item.quantity}
+            {productsInCart.map((item, index) => (
+              <li className="list-group-item d-flex justify-content-between align-items-center" key={index}>
+                <span>
+                  {item.title} - ${item.price} x {item.quantity}
+                </span>
+                <button className="btn btn-outline-danger btn-sm" onClick={() => handleRemove(item.id)}>
+                  Remove
+                </button>
               </li>
             ))}
           </ul>
