@@ -157,7 +157,6 @@
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   text-align: center;
   font-weight: normal;
-  padding-bottom: 15vh;
 }
 
 .cardimg {
@@ -254,5 +253,6 @@ ul .btn-primary:hover{
   color: var(--bs-light) !important;
 }
 .display-1{
-  font-weight: 500 !important;
+  font-weight: 400 !important;
+  line-height: 4cap !important;
 }

@@ -7,7 +7,7 @@ function Cards() {
         className={`${css.container} container d-flex justify-content-center align-items-center`} id="cardcont"
       >
         <div
-          className={`${css.cardcont} container justify-self-center row d-flex justify-content-center py-5`}
+          className={`${css.cardcont} container justify-self-center row d-flex justify-content-center`}
         >
           <h2
             className={`${css.displaymain} display-1 text-center py-3 fw-normal`}
