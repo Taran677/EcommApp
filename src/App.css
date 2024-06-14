@@ -256,3 +256,6 @@ ul .btn-primary:hover{
   font-weight: 400 !important;
   line-height: 4cap !important;
 }
+.links{
+  color: var(--bs-primary);
+}

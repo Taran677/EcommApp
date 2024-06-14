@@ -9,7 +9,7 @@ function AboutMe() {
           <p className="lead">
             Hi there! I am Taranveer Singh, a Bachelor's in Technology student
             in Computer Science and Engineering at Guru Nanak Dev University. I
-            am passionate about web development, and this is one of my projects, made using <span className="lead"><a target="blank" href="https://getbootstrap.com/">Bootstrap</a></span>, <span className="lead"><a target="blank" href="https://fakestoreapi.com/docs">FakeStore API</a></span> and <span className="lead"><a target="blank" href="https://react.dev/">ReactJs</a></span>.
+            am passionate about web development, and this is one of my projects, made using <span className="lead links"><a target="blank" href="https://getbootstrap.com/">Bootstrap</a></span>, <span className="lead links"><a target="blank" href="https://fakestoreapi.com/docs">Fake Store API</a></span> and <span className="lead links"><a target="blank" href="https://react.dev/">ReactJs</a></span>.
           </p>
         </div>
         <div className="col-md-6 imgcol">
