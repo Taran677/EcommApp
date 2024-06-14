@@ -91,13 +91,7 @@ function OtherProducts({ productsInCart, setProductsInCart, setProducts, product
             <Products
               viewNav={explore}
               range={20}
-              setProducts={setProducts}
               products={sortedAndFilteredProducts} // Pass sortedAndFilteredProducts instead of products
-              count={count}
-              setCount={setCount}
-              setCart = {setCart}
-              productsInCart={productsInCart}
-              setProductsInCart={setProductsInCart}
             />
           </div>
         </div>

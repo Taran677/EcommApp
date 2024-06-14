@@ -20,15 +20,8 @@ function Trending({
       <div className="container row">
         {" "}
         <Products
-          viewNav={explore}
           products={products}
-          count={count}
-          setCount={setCount}
-          setProducts={setProducts}
-          setCart={setCart}
           range={5}
-          productsInCart={productsInCart}
-          setProductsInCart={setProductsInCart}
         ></Products>
         
       </div>

@@ -2,7 +2,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import css from "./Navbar.module.css";
 import { flushSync } from "react-dom";
 
-function Navbar({ setExplore, setCart, setAboutMe, setContact}) {
+function Navbar({ setExplore, setCart, setAboutMe, setContact, productsInCart
+}) {
   return (
     <nav
       className={`row bg-light mw-100 fixed-top justify-content-center d-flex ${css.navbarmain} border-bottom border-primary navbar navbar-expand-lg`}
@@ -86,9 +87,7 @@ function Navbar({ setExplore, setCart, setAboutMe, setContact}) {
             >
               Cart
               <span className="mybdg badge bg-primary badge-primary">
-                {localStorage.getItem("productsInCart")
-                  ? JSON.parse(localStorage.getItem("productsInCart")).length
-                  : 0}
+                {productsInCart.length}
               </span>
             </li>
           </ul>
