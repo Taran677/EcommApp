@@ -253,3 +253,6 @@ ul .btn-primary{
 ul .btn-primary:hover{
   color: var(--bs-light) !important;
 }
+.display-1{
+  font-weight: 500;
+}
