@@ -5,7 +5,7 @@
 }
 
 #logo {
-  font-family: "Dancing Script", cursive;
+  font-family: "Dosis", sans-serif;
   font-weight: 700;
   font-size: 4vh;
   background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);
@@ -13,7 +13,6 @@
   -webkit-background-clip: text !important;
   background-clip: text !important;
   color: transparent !important;  
-  border: 0.1rem solid #56CCF2;
 }
 #logo:hover{
   -webkit-background-clip: none !important;
@@ -29,7 +28,7 @@
 }
 
 .logo {
-  font-family: "Dancing Script", cursive;
+  font-family: "Dosis", sans-serif;
   font-weight: 700;
   background: #56CCF2;
   background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);
@@ -38,6 +37,7 @@
   -webkit-background-clip: text !important;
   background-clip: text !important;
   color: transparent !important;
+  padding: 0 0 0 1vw !important;
 }
 
 @media screen and (max-width: 2000px) {
@@ -59,9 +59,7 @@
     align-items: center;
   }
 
-  .display-4,
-  .logo,
-  #logo {
+  .display-4 {
     font-size: 5vh !important;
   }
 
@@ -156,6 +154,7 @@
   background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   text-align: center;
+  font-family: "Dosis", serif;
   font-weight: normal;
 }
 
@@ -279,4 +278,9 @@ ul .btn-primary:hover{
 }
 .text-center{
   animation: none;
+}
+@media screen and (max-width:576px) {
+  .display-1{
+    line-height: 2cap !important;
+  }
 }
