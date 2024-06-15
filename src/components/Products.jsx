@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import CardProduct from "./Subcomponents/CardProduct";
 
-function Products({ products, range }) {
+function Products({ products, range, setCartCount }) {
   const [counts, setCounts] = useState([]);
   const [cart, setCart] = useState([]);
   const [productsInCart, setProductsInCart] = useState([]);
-
+  // console.log(productsInCart)
   // Initialize counts based on the range
+  setCartCount(productsInCart.length)
   useEffect(() => {
     setCounts(products.slice(0, range).map(() => 0));
   }, [products, range]);

@@ -13,25 +13,10 @@ import Contact from "./components/Contact";
 function App() {
   const [products, setProducts] = useState([]);
   const [explore, setExplore] = useState(false);
-  console.log(explore);
-  const [productsInCart, setProductsInCart] = useState([]);
-  console.log(productsInCart);
-
-  const [counts, setCounts] = useState([]);
   const [aboutMe, setAboutMe] = useState(false);
+  const [cartCount, setCartCount] = useState(0);
   const [contact, setContact] = useState(false);
   const [cart, setCart] = useState(false);
-  useEffect(() => {
-    setCounts(products.map(() => 0));
-  }, [products]);
-
-  const setCount = (index, newCount) => {
-    setCounts((prevCounts) => {
-      const newCounts = [...prevCounts];
-      newCounts[index] = newCount;
-      return newCounts;
-    });
-  };
 
   return (
     <>
@@ -40,7 +25,6 @@ function App() {
           setAboutMe={setAboutMe}
           setExplore={setExplore}
           setCart={setCart}
-          productsInCart={productsInCart}
           setContact={setContact}
         />
         {!explore && !contact && !cart && !aboutMe && (
@@ -51,28 +35,18 @@ function App() {
       {explore && !contact && !cart && !aboutMe && (
         <OtherProducts
           products={products}
-          setProducts={setProducts}
-          productsInCart={productsInCart}
-          setProductsInCart={setProductsInCart}
-          count={counts}
-          setCount={setCount}
           explore={explore}
-          setCart={setCart}
+          setCartCount={setCartCount}
         />
       )}
       {!explore && !contact && !cart && !aboutMe && (
         <Trending
-          explore={explore}
           products={products}
-          setProducts={setProducts}
-          count={counts}
-          setCount={setCount}
-          setCart={setCart}
-          productsInCart={productsInCart}
-          setProductsInCart={setProductsInCart}
+          setCartCount={setCartCount}
+
         />
       )}
-      {cart && !contact && !explore && !aboutMe && <Cart></Cart>}
+      {cart && !contact && !explore && !aboutMe && <Cart setCartCount={setCartCount}></Cart>}
       {aboutMe && !contact  && !cart && !explore && <AboutMe></AboutMe>}
       {!cart && contact && !explore && !aboutMe && <Contact></Contact>}
       <CallAPI setProducts={setProducts} />

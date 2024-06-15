@@ -278,7 +278,7 @@ ul .btn-primary:hover{
 }
 @media screen and (max-width: 576px) {
   .card, main{
-    animation-range: entry 0% cover 40%;
+    animation-range: entry 0% cover 30%;
   } 
 }
 .text-center{

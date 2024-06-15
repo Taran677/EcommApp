@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import CardProduct from "./Subcomponents/CardProduct";
 import BuyProduct from "./Subcomponents/BuyProduct";
 import Bill from "./Subcomponents/Bill";
-function Cart() {
+function Cart({setCartCount}) {
   const [productsInCart, setProductsInCart] = useState([]);
-
+  setCartCount(productsInCart.length)
   useEffect(() => {
     const storedProducts = localStorage.getItem("productsInCart");
     if (storedProducts) {

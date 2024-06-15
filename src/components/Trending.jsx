@@ -2,14 +2,8 @@ import React, { useState } from "react";
 import Products from "./Products";
 import css from "./Trending.module.css";
 function Trending({
-  setProducts,
   products,
-  explore,
-  count,
-  setCount,
-  setCart,
-  setProductsInCart,
-  productsInCart,
+  setCartCount
 })
 
 {
@@ -22,6 +16,7 @@ function Trending({
         <Products
           products={products}
           range={5}
+          setCartCount={setCartCount}
         ></Products>
         
       </div>
