@@ -14,6 +14,7 @@ function Cart() {
 
   return (
     <div className="container">
+      <h2>Shopping Cart</h2>
       <div className="row">
         {productsInCart.map((product, index) => (
           <BuyProduct

@@ -29,7 +29,6 @@ function Bill({ productsInCart, setProductsInCart }) {
 
   return (
     <div className="container">
-      <h2>Shopping Cart</h2>
       <div className="card">
         <div className="card-body">
           <h5 className="card-title">Items in Cart</h5>

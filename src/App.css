@@ -241,7 +241,7 @@ a {
 .toast {
   position: relative !important;
   bottom: 15vh;
-  left: 40vw;
+  left: 0vw;
 
 }
 .btn-primary{
