@@ -300,3 +300,6 @@ ul .btn-primary:hover{
   width: 80% !important;
   z-index: 1050 !important; /* Ensures the alert is above other elements */
 }
+.mtc{
+  margin-bottom: 3vh;
+}
