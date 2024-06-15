@@ -50,7 +50,7 @@ function CardProduct({
       JSON.stringify(updatedProductsInCart)
     );
     // Show alert
-    setAlertMessage(`${product.title} has been added to the cart.`);
+    setAlertMessage(`${product.title}, quantity: ${count} has been added to the cart.`);
     setShowAlert(true);
     setTimeout(() => setShowAlert(false), 3000); // Hide alert after 3 seconds
   };
