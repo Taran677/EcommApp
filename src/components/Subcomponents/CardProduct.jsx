@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import css from "./CardProduct.module.css";
 import ProductCounter from "./ProductCounter";
 
@@ -11,6 +11,9 @@ function CardProduct({
   productsInCart,
   setProductsInCart,
 }) {
+  const [showAlert, setShowAlert] = useState(false);
+  const [alertMessage, setAlertMessage] = useState("");
+
   const handleCountChange = (newCount) => {
     setCount(newCount);
     setCart((prevCart) => {
@@ -46,6 +49,10 @@ function CardProduct({
       "productsInCart",
       JSON.stringify(updatedProductsInCart)
     );
+    // Show alert
+    setAlertMessage(`${product.title} has been added to the cart.`);
+    setShowAlert(true);
+    setTimeout(() => setShowAlert(false), 3000); // Hide alert after 3 seconds
   };
 
   return (
@@ -82,6 +89,11 @@ function CardProduct({
       <div className="counter container row">
         <ProductCounter id={id} count={count} setCount={handleCountChange} />
       </div>
+      {showAlert && (
+        <div className="alert alert-success mt-3" role="alert">
+          {alertMessage}
+        </div>
+      )}
     </div>
   );
 }
