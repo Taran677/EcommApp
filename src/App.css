@@ -303,3 +303,6 @@ ul .btn-primary:hover{
 .mtc{
   margin-bottom: 3vh;
 }
+.addcart{
+  transform: translateY(25%);
+}

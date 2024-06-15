@@ -72,7 +72,7 @@ function CardProduct({
       </ul>
       <div className="card-body-1 my-2">
         <button
-          className="card-link btn btn-outline-primary"
+          className="card-link btn btn-outline-primary addcart"
           onClick={handleBuyClick}
         >
           Add to Cart {" "}
