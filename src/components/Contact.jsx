@@ -25,7 +25,7 @@ function Contact() {
               width="16"
               height="16"
               fill="currentColor"
-              class="bi bi-linkedin"
+              className="bi bi-linkedin"
               viewBox="0 0 16 16"
             >
               <path
@@ -46,7 +46,7 @@ function Contact() {
               width="16"
               height="16"
               fill="currentColor"
-              class="bi bi-github"
+              className="bi bi-github"
               viewBox="0 0 16 16"
             >
               <path

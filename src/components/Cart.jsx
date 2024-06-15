@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
-import BuyProduct from "./Subcomponents/BuyProduct";
-import Bill from "./Subcomponents/Bill";
-
+import { useState , useEffect} from "react";
+import Bill from "./Subcomponents/Bill"
+import BuyProduct from "./Subcomponents/BuyProduct"
 function Cart({ setCartCount }) {
   const [productsInCart, setProductsInCart] = useState([]);
 
@@ -12,12 +11,12 @@ function Cart({ setCartCount }) {
     }
     // Update cart count when productsInCart changes
     setCartCount(productsInCart.length);
-  }, [productsInCart, setCartCount]);
+  }, [productsInCart.length, setCartCount]); // Ensure setCartCount is not causing unnecessary updates
 
   const emptyCart = () => {
     setProductsInCart([]);
     localStorage.setItem("productsInCart", JSON.stringify([]));
-    // Update cart count when cart is emptied
+    // Update cart count directly to 0
     setCartCount(0);
   };
 
@@ -41,7 +40,10 @@ function Cart({ setCartCount }) {
           />
         ))}
       </div>
-      <Bill productsInCart={productsInCart} setProductsInCart={setProductsInCart} />
+      <Bill
+        productsInCart={productsInCart}
+        setProductsInCart={setProductsInCart}
+      />
     </div>
   );
 }

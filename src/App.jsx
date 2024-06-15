@@ -6,6 +6,7 @@ import About from "./components/About";
 import CallAPI from "./components/CallAPI";
 import Cards from "./components/Cards";
 import Trending from "./components/Trending";
+import packageJson from "../package.json";
 import OtherProducts from "./components/OtherProducts";
 import AboutMe from "./components/AboutMe";
 import Cart from "./components/Cart";
@@ -17,7 +18,7 @@ function App() {
   const [cartCount, setCartCount] = useState(0);
   const [contact, setContact] = useState(false);
   const [cart, setCart] = useState(false);
-
+  console.log(packageJson);
   return (
     <>
       <div className="mainelements">
@@ -40,14 +41,14 @@ function App() {
         />
       )}
       {!explore && !contact && !cart && !aboutMe && (
-        <Trending
-          products={products}
-          setCartCount={setCartCount}
-
-        />
+        <Trending products={products} setCartCount={setCartCount} />
       )}
-      {cart && !contact && !explore && !aboutMe && <Cart setCartCount={setCartCount}></Cart>}
-      {aboutMe && !contact  && !cart && !explore && <AboutMe></AboutMe>}
+      {cart && !contact && !explore && !aboutMe && (
+        <Cart setCartCount={setCartCount}></Cart>
+      )}
+      {aboutMe && !contact && !cart && !explore && (
+        <AboutMe version={packageJson.version}></AboutMe>
+      )}
       {!cart && contact && !explore && !aboutMe && <Contact></Contact>}
       <CallAPI setProducts={setProducts} />
     </>

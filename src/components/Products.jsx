@@ -5,14 +5,16 @@ function Products({ products, range, setCartCount }) {
   const [counts, setCounts] = useState([]);
   const [cart, setCart] = useState([]);
   const [productsInCart, setProductsInCart] = useState([]);
-  // console.log(productsInCart)
-  // Initialize counts based on the range
-  setCartCount(productsInCart.length)
+
+  // useEffect to initialize counts based on the range
   useEffect(() => {
     setCounts(products.slice(0, range).map(() => 0));
   }, [products, range]);
 
- 
+  // Update cart count whenever productsInCart changes
+  useEffect(() => {
+    setCartCount(productsInCart.length);
+  }, [productsInCart, setCartCount]);
 
   const handleSetCount = (index, newCount) => {
     setCounts((prevCounts) => {

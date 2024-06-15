@@ -2,13 +2,23 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import css from "./Navbar.module.css";
 import { flushSync } from "react-dom";
 
-function Navbar({ setExplore, setCart, setAboutMe, setContact}) {
+function Navbar({ setExplore, setCart, setAboutMe, setContact }) {
   return (
     <nav
       className={`row bg-light mw-100 fixed-top justify-content-center d-flex ${css.navbarmain} border-bottom border-primary navbar navbar-expand-lg`}
     >
       <div className="container-fluid">
-        <a className="navbar-brand d-lg-none rounded px-2 text-light" id="logo" href="#">
+        <a
+          className="navbar-brand d-lg-none rounded px-2 text-light"
+          id="logo"
+          href="#"
+          onClick={() => {
+            setCart(false);
+            setExplore(false);
+            setAboutMe(false);
+            setContact(false);
+          }}
+        >
           QuickCart
         </a>
         <button
@@ -41,7 +51,8 @@ function Navbar({ setExplore, setCart, setAboutMe, setContact}) {
               About
             </li>
             <li
-              className={`${css.li} justify-content-center fw-normal nav-link btn btn-primary py-3 mx-2 text-center rounded`} onClick={() => {
+              className={`${css.li} justify-content-center fw-normal nav-link btn btn-primary py-3 mx-2 text-center rounded`}
+              onClick={() => {
                 setAboutMe(false);
                 setCart(false);
                 setExplore(false);
