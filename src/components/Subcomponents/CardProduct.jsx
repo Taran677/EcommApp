@@ -75,16 +75,11 @@ function CardProduct({
           className="card-link btn btn-outline-primary"
           onClick={handleBuyClick}
         >
-          Buy
-        </button>
-        <a href="#" className="card-link btn btn-outline-primary">
-          <span
-            onClick={handleBuyClick}
-            className={`material-symbols-outlined ${css.cart}`}
-          >
+          Add to Cart {" "}
+          <span className={`material-symbols-outlined ${css.cart}`}>
             shopping_cart
           </span>
-        </a>
+        </button>
       </div>
       <div className="counter container row">
         <ProductCounter id={id} count={count} setCount={handleCountChange} />
