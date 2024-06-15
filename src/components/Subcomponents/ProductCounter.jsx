@@ -11,7 +11,7 @@ function ProductCounter({count, setCount, id}) {
     <div className="container my-3">
       <div className="card text-center">
         <div className="card-body">
-          <h5 className="card-title">Product Counter</h5>
+          <h5 className="card-title">Set Quantity</h5>
           <p className="card-text">Count: {count}</p>
           <button className="btn btn-primary mx-1" onClick={increment}>
             +
