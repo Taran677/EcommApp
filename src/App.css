@@ -268,7 +268,7 @@ ul .btn-primary:hover{
   }
   to{
     opacity: 1;
-    scale: 1.;
+    scale: 1.0;
   }
 }
 .card, main{
